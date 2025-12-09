@@ -5,14 +5,6 @@ export class Invoice {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column()
-  number: string;
-
-  @Column({
-    type: 'date',
-  })
-  date: string;
-
   @Column({
     type: 'decimal',
   })

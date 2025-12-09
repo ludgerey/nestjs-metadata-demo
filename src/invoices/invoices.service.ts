@@ -1,6 +1,5 @@
 import { Injectable } from '@nestjs/common';
 import { CreateInvoiceDto } from './dto/create-invoice.dto';
-import { UpdateInvoiceDto } from './dto/update-invoice.dto';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Invoice } from './entities/invoice.entity';
 import { Repository } from 'typeorm';
