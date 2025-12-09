@@ -1,10 +1,7 @@
-import { IsNumber, IsOptional } from 'class-validator';
+import { IsOptional } from 'class-validator';
 import { IsMetadata } from '../../shared/decorators/is-metadata.decorator';
 
-export class CreateInvoiceDto {
-  @IsNumber()
-  amount: number;
-
+export class FindInvoicesQueryDto {
   @IsOptional()
   @IsMetadata()
   metadata?: Record<string, string>;
