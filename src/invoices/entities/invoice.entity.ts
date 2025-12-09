@@ -9,4 +9,7 @@ export class Invoice {
     type: 'decimal',
   })
   amount: number;
+
+  @Column('jsonb', { default: {} })
+  metadata: Record<string, string>;
 }
