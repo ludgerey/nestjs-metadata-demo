@@ -2,10 +2,13 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { ValidationPipe } from '@nestjs/common';
 import { NestExpressApplication } from '@nestjs/platform-express';
+import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
+
   app.set('query parser', 'extended');
+
   app.useGlobalPipes(
     new ValidationPipe({
       transform: true,
@@ -13,6 +16,11 @@ async function bootstrap() {
       forbidNonWhitelisted: true,
     }),
   );
+
+  const config = new DocumentBuilder().setTitle('Nestjs Metadata Demo').build();
+  const documentFactory = () => SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup('api', app, documentFactory);
+
   await app.listen(process.env.PORT ?? 3000);
 }
 bootstrap();
