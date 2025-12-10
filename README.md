@@ -47,7 +47,7 @@ metadata: Record<string, string>;
 Create an GIN index for your table and metadata columns in a migration file (preferred) or
 run it directly in your database:
 
-```
+```postgresql
 CREATE INDEX idx_invoices_metadata
   ON invoices
   USING GIN (metadata jsonb_path_ops);
