@@ -27,7 +27,7 @@ to be able to integrate with external systems that require some kind of data map
   
 ## Advantages
 
-* No extra tables required — metadata kept inline on the entity (invoices).
+* No extra tables required — metadata kept inline on the entity.
 * Independent key updates — different systems can update their own namespaced keys without conflicts.
 * Multiple values per entity supported.
 * Indexable and searchable via PostgreSQL JSONB GIN indexes — fast queries.
