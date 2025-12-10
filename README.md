@@ -18,7 +18,7 @@ to be able to integrate with external systems that require some kind of data map
 - how to implement **DTOs and validation** for input data and query strings.
 - how to allow safe updates and key removals (using an empty string) of metadata entries.
 
-## Used technologies
+## Technologies
 
 * NestJS
 * PostgreSQL
