@@ -2,7 +2,7 @@
 
 This is a demo project showcasing how to implement a lightweight metadata extension
 that allows **storing** and **filtering** metadata in a **key-value format** using NestJS and PostgreSQL
-inspired by Stripe's metadata approach.
+inspired by [Stripe's metadata](https://docs.stripe.com/metadata) approach.
 
 
 ## Why this project?
@@ -76,7 +76,7 @@ export class CreateInvoiceDto {
 
 This uses the custom `IsMetadata` decorator for validation. It ensures that metadata is an object with
 string keys (alphanumeric and underscores only) and string values (max length 255 characters).
-See src/shared/decorators/is-metadata.decorator.ts.
+See [src/shared/decorators/is-metadata.decorator.ts](src/shared/decorators/is-metadata.decorator.ts).
 
 ### Implement filtering by metadata in queries
 
@@ -155,3 +155,8 @@ return this.invoiceRepository.save({
   metadata: metadata,
 });
 ```
+
+## Links
+
+* Stripe Metadata Guide: https://docs.stripe.com/metadata
+* Stripe API Reference (metadata): https://stripe.com/docs/api/metadata
