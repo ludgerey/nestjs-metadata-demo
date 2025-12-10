@@ -156,6 +156,16 @@ return this.invoiceRepository.save({
 });
 ```
 
+### Add Swagger documentation
+
+Add appropriate Swagger decorators to your DTOs to document the metadata field. Use `type: 'object'` with
+`additionalProperties: { type: 'string' }` to indicate that the metadata is a key-value object with string values.
+
+Check [src/invoice/dto/create-invoice.dto.ts](src/invoice/dto/create-invoice.dto.ts) or
+[src/invoice/dto/find-invoices-query.dto.ts](src/invoice/dto/find-invoices-query.dto.ts)
+for an example implementation.
+
+
 ## Links
 
 * Stripe Metadata Guide: https://docs.stripe.com/metadata
