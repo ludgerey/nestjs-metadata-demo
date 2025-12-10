@@ -170,3 +170,4 @@ for an example implementation.
 
 * Stripe Metadata Guide: https://docs.stripe.com/metadata
 * Stripe API Reference (metadata): https://stripe.com/docs/api/metadata
+* Use cases for metadata: https://stripe.com/docs/metadata/use-cases
